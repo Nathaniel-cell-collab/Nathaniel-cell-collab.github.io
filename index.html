@@ -76,6 +76,23 @@
       font-size: 1.15rem;
       line-height: 1.7;
     }
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .about-container img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 15px rgba(0, 188, 212, 0.6);
+    }
+    .about-text {
+      flex: 1;
+    }
   </style>
 </head>
 <body>
@@ -94,8 +111,13 @@
 
   <section id="about" data-aos="fade-up">
     <h1>À propos</h1>
-    <p class="intro-text">Bonjour, je m'appelle <strong>Nathaniel Leperlier</strong>, étudiant passionné en programmation. Ce qui me motive au quotidien, c’est la résolution de problèmes par l'informatique et la création de solutions utiles pour faciliter la vie de chacun. À travers ce portfolio, je partage mes projets, mes scripts et mes explorations techniques.</p>
-    <a href="CV%20LEPERLIER%20Nathaniel%20(5).pdf" class="cv-button" download>Télécharger mon CV</a>
+    <div class="about-container">
+      <img src="photo.jpg" alt="Nathaniel Leperlier">
+      <div class="about-text">
+        <p class="intro-text">Bonjour, je m'appelle <strong>Nathaniel Leperlier</strong>, étudiant passionné en programmation. Ce qui me motive au quotidien, c’est la résolution de problèmes par l'informatique et la création de solutions utiles pour faciliter la vie de chacun. À travers ce portfolio, je partage mes projets, mes scripts et mes explorations techniques.</p>
+        <a href="CV%20LEPERLIER%20Nathaniel%20(5).pdf" class="cv-button" download>Télécharger mon CV</a>
+      </div>
+    </div>
   </section>
 
   <section id="skills" data-aos="fade-up">
