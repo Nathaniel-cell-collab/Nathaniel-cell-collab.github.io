@@ -22,6 +22,7 @@
       scroll-behavior: smooth;
     }
     header {
+  transition: transform 0.3s ease;
   position: sticky;
   top: 0;
   background: #1e1e1e;
@@ -262,5 +263,19 @@
   <script>
     AOS.init({ duration: 800 });
   </script>
+<script>
+  let lastScrollTop = 0;
+  const header = document.querySelector('header');
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      header.style.transform = 'translateY(-100%)';
+    } else {
+      header.style.transform = 'translateY(0)';
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+</script>
 </body>
 </html>
