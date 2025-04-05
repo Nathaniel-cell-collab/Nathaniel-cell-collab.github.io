@@ -152,20 +152,61 @@
 }
 
   @media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
   header {
     flex-direction: column;
     align-items: flex-start;
   }
   nav {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 1rem;
-  }
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
   nav a {
     margin: 0.5rem 1rem;
   }
+}
+.burger-menu {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--text);
+  cursor: pointer;
+}
+#mobile-menu.hidden {
+  display: none;
+}
+#mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  #mobile-menu {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+    margin-left: auto;
+  }
+  .burger-menu {
+    display: block;
+    margin-left: auto;
+  }
+  #mobile-menu a {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: left;
+    padding: 0.5rem 1rem;
+  }
+}
+.desktop-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
 }
 </style>
 </head>
@@ -175,12 +216,21 @@
       <img src="photo.jpg" alt="Nathaniel Leperlier">
       <strong>Nathaniel Leperlier</strong>
     </div>
-    <nav>
-      <a href="#about">À propos</a>
-      <a href="#skills">Compétences</a>
-      <a href="#projects">Projets</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <nav class="desktop-menu">
+  <a href="#about">À propos</a>
+  <a href="#skills">Compétences</a>
+  <a href="#projects">Projets</a>
+  <a href="#contact">Contact</a>
+</nav>
+<div class="burger-menu" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div>
+<nav id="mobile-menu" class="hidden">
+  <a href="#about">À propos</a>
+  <a href="#skills">Compétences</a>
+  <a href="#projects">Projets</a>
+  <a href="#contact">Contact</a>
+</nav>
   </header>
 
   <section id="about" data-aos="fade-up">
@@ -260,7 +310,13 @@
   </section>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('hidden');
+}
+</script>
+<script>
     AOS.init({ duration: 800 });
   </script>
 <script>
