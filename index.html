@@ -29,6 +29,19 @@
       align-items: center;
       z-index: 1000;
     }
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    .logo-container img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      margin-right: 0.75rem;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+    }
     nav a {
       margin-left: 2rem;
       color: var(--text);
@@ -59,11 +72,18 @@
       text-decoration: none;
       font-weight: bold;
     }
+    .intro-text {
+      font-size: 1.15rem;
+      line-height: 1.7;
+    }
   </style>
 </head>
 <body>
   <header>
-    <div><strong>Nathaniel Leperlier</strong></div>
+    <div class="logo-container">
+      <img src="photo.jpg" alt="Nathaniel Leperlier">
+      <strong>Nathaniel Leperlier</strong>
+    </div>
     <nav>
       <a href="#about">À propos</a>
       <a href="#skills">Compétences</a>
@@ -74,7 +94,7 @@
 
   <section id="about" data-aos="fade-up">
     <h1>À propos</h1>
-    <p>Bonjour, je m'appelle <strong>Nathaniel Leperlier</strong>, étudiant passionné en programmation. Ce qui me motive au quotidien, c’est la résolution de problèmes par l'informatique et la création de solutions utiles pour faciliter la vie de chacun. À travers ce portfolio, je partage mes projets, mes scripts et mes explorations techniques.</p>
+    <p class="intro-text">Bonjour, je m'appelle <strong>Nathaniel Leperlier</strong>, étudiant passionné en programmation. Ce qui me motive au quotidien, c’est la résolution de problèmes par l'informatique et la création de solutions utiles pour faciliter la vie de chacun. À travers ce portfolio, je partage mes projets, mes scripts et mes explorations techniques.</p>
     <a href="CV%20LEPERLIER%20Nathaniel%20(5).pdf" class="cv-button" download>Télécharger mon CV</a>
   </section>
 
