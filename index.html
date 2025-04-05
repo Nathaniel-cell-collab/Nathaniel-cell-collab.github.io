@@ -109,17 +109,23 @@
       border-radius: 10px;
     }
     .skill {
-      flex: 0 0 auto;
-      width: 200px;
-      height: 200px;
-      background: #1e1e1e;
-      padding: 1rem;
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      text-align: left;
-    }
+        flex: 0 0 auto;
+        width: 200px;
+        height: 200px;
+        background: #1e1e1e;
+        padding: 1rem;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+      }
+
+      .skill br + * {
+        text-indent: 1.2em;
+        display: inline-block;
+      }
+
   </style>
 </head>
 <body>
