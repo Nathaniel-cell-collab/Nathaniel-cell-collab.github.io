@@ -3,16 +3,22 @@
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     align-items: center;
+    justify-content: center;
 }
 
 .about-image {
-    max-width: 100%;
+    max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
 }
 
 .about-text h3 {

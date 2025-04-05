@@ -5,4 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
+
+    if (!navLinks.classList.contains('active')) {
+        navLinks.classList.add('active');
+    }
 });
