@@ -55,7 +55,7 @@
       margin: auto;
     }
     h1, h2 { color: var(--accent); margin-bottom: 1rem; }
-    .project, .skill {
+    .project {
       margin-bottom: 1.5rem;
       background: #1e1e1e;
       padding: 1rem;
@@ -93,6 +93,21 @@
     .about-text {
       flex: 1;
     }
+    .skills-grid {
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: flex-end;
+    }
+    .skill {
+      flex: 1 1 40%;
+      background: #1e1e1e;
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 0;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -122,10 +137,12 @@
 
   <section id="skills" data-aos="fade-up">
     <h2>Compétences</h2>
-    <div class="skill">Langages : C, Python, Bash, Ruby</div>
-    <div class="skill">Outils & Technologies : Git, Linux, Docker, GitHub Actions</div>
-    <div class="skill">Librairies & Frameworks : NumPy, outils maison de data analysis (C)</div>
-    <div class="skill">Savoir-faire : Programmation graphique, algorithmie, reproduction de shells</div>
+    <div class="skills-grid">
+      <div class="skill">Langages : C, Python, Bash, Ruby</div>
+      <div class="skill">Outils & Technologies : Git, Linux, Docker, GitHub Actions</div>
+      <div class="skill">Librairies & Frameworks : NumPy, outils maison de data analysis (C)</div>
+      <div class="skill">Savoir-faire : Programmation graphique, algorithmie, reproduction de shells</div>
+    </div>
   </section>
 
   <section id="projects" data-aos="fade-up">
