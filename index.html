@@ -109,22 +109,44 @@
       border-radius: 10px;
     }
     .skill {
-        flex: 0 0 auto;
-        width: 200px;
-        height: 200px;
-        background: #1e1e1e;
-        padding: 1rem;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        text-align: left;
-      }
+      flex: 0 0 auto;
+      width: 200px;
+      height: 200px;
+      background: #1e1e1e;
+      padding: 1rem;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+      line-height: 1.5;
+    }
+    .skill br + * {
+      text-indent: 1.2em;
+      display: inline-block;
+    }
+    .skill-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
 
-      .skill br + * {
-        text-indent: 1.2em;
-        display: inline-block;
-      }
+.skill-list {
+  list-style: none;
+  padding-left: 1.2em;
+}
+
+.skill-list li {
+  position: relative;
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+
+.skill-list li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+}
 
   </style>
 </head>
@@ -157,32 +179,39 @@
     <h2>Compétences</h2>
     <div class="skills-grid">
       <div class="skill">
-        <div style="text-align: center; font-weight: bold; margin-bottom: 0.5rem;">Langages</div>
-        - C<br>
-        - Python<br>
-        - Bash<br>
-        - Ruby
+        <div class="skill-title">Langages</div>
+        <ul class="skill-list">
+          <li>C</li>
+          <li>Python</li>
+          <li>Bash</li>
+          <li>Ruby</li>
+        </ul>
       </div>
       <div class="skill">
-        <div style="text-align: center; font-weight: bold; margin-bottom: 0.5rem;">Outils & Technologies</div>
-        - Git<br>
-        - Linux<br>
-        - Docker<br>
-        - GitHub Actions
+        <div class="skill-title">Outils & Technologies</div>
+        <ul class="skill-list">
+          <li>Git</li>
+          <li>Linux</li>
+          <li>Docker</li>
+          <li>Github Actions</li>
+          </ul>
       </div>
       <div class="skill">
-        <div style="text-align: center; font-weight: bold; margin-bottom: 0.5rem;">Librairies & Frameworks</div>
-        - NumPy<br>
-        - Outils maison<br>
-        - Data analysis (C)
+        <div class="skill-title">Librairies & Frameworks</div>
+        <ul class="skill-list">
+          <li>NumPy</li>
+          <li>Outils maison</li>
+          <li>Data analysis (C)</li>
+        </ul>
       </div>
       <div class="skill">
-        <div style="text-align: center; font-weight: bold; margin-bottom: 0.5rem;">Savoir-faire</div>
-        - Programmation graphique<br>
-        - Algorithmie<br>
-        - Reproduction de shells
+        <div class="skill-title">Librairies & Frameworks</div>
+        <ul class="skill-list">
+          <li>Programmation graphique</li>
+          <li>Algorithmie</li>
+          <li>Unix System Programing</li>
+        </ul>
       </div>
-    </div>
   </section>
 
   <section id="projects" data-aos="fade-up">
